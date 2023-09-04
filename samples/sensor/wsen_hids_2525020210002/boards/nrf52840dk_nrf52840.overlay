@@ -1,0 +1,7 @@
+&i2c0 {
+	hids:hids-2525020210002@44 {
+		compatible = "we,wsen-hids-2525020210002";
+		reg = <0x44>;
+		precision = "High";
+	};
+};
