@@ -204,6 +204,7 @@ source "drivers/sensor/vl53l0x/Kconfig"
 source "drivers/sensor/vl53l1x/Kconfig"
 source "drivers/sensor/voltage_divider/Kconfig"
 source "drivers/sensor/wsen_hids_2525020210002/Kconfig"
+source "drivers/sensor/wsen_pdus_25131308XXXXX/Kconfig"
 source "drivers/sensor/xmc4xxx_temp/Kconfig"
 
 endif # SENSOR
