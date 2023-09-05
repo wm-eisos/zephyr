@@ -1,0 +1,7 @@
+&i2c1 {
+	pdus:pdus-25131308XXXXX@78 {
+		compatible = "we,wsen-pdus-25131308XXXXX";
+		reg = < 0x78 >;
+		sensor-type = < 4 >;
+	};
+};
