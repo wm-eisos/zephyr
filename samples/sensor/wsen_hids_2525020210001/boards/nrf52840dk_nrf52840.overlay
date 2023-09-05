@@ -1,0 +1,8 @@
+&i2c0 {
+	hids:hids-2525020210001@5F {
+		compatible = "we,wsen-hids-2525020210001";
+		reg = < 0x5F >;
+		odr = "1";
+		drdy-gpios =  <&gpio1 1 GPIO_ACTIVE_HIGH>;
+	};
+};
