@@ -149,6 +149,7 @@ add_subdirectory_ifdef(CONFIG_VL53L1X vl53l1x)
 add_subdirectory_ifdef(CONFIG_VOLTAGE_DIVIDER voltage_divider)
 add_subdirectory_ifdef(CONFIG_WSEN_HIDS_2525020210002		wsen_hids_2525020210002)
 add_subdirectory_ifdef(CONFIG_WSEN_PDUS_25131308XXXXX		wsen_pdus_25131308XXXXX)
+add_subdirectory_ifdef(CONFIG_WSEN_TIDS_2521020222501		wsen_tids_2521020222501)
 add_subdirectory_ifdef(CONFIG_XMC4XXX_TEMP xmc4xxx_temp)
 
 zephyr_syscall_header(${ZEPHYR_BASE}/include/zephyr/drivers/sensor.h)
