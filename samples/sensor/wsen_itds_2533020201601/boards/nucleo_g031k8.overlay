@@ -1,0 +1,20 @@
+&i2c1 {
+	itds:itds-2533020201601@19 {
+		compatible = "we,wsen-itds-2533020201601";
+		reg = <0x19>;
+		odr = "400";
+		op-mode = "high-perf";
+		power-mode = "normal";
+		tap-threshold = <0>, <0>, <6>;
+		tap-latency = < 5 >;
+		tap-shock = < 2 >;
+		tap-quiet = < 1 >;
+		tap-mode = < 1 >;
+		freefall-duration = < 6 >;
+		freefall-threshold = < 10 >;
+		delta-duration = < 1 >;
+		delta-threshold = < 4 >;
+		events-interrupt-gpios = <&gpioa 1 GPIO_ACTIVE_HIGH>;
+		drdy-interrupt-gpios = <&gpioa 0 GPIO_ACTIVE_HIGH>;
+	};
+};
