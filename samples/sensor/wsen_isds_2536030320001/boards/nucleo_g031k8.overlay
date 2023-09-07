@@ -1,0 +1,16 @@
+&i2c1 {
+	isds:isds-2536030320001@6B {
+		compatible = "we,wsen-isds-2536030320001";
+		reg = <0x6B>;
+		accel-odr = "416";
+		gyro-odr = "416";
+		tap-threshold = < 9 >;
+		tap-latency = < 5 >;
+		tap-shock = < 2 >;
+		tap-quiet = < 1 >;
+		tap-mode = < 1 >;
+		tap-axis-enable = < 0 0 1 >;
+		events-interrupt-gpios = <&gpioa 1 GPIO_ACTIVE_HIGH>;
+		drdy-interrupt-gpios = <&gpioa 0 GPIO_ACTIVE_HIGH>;
+	};
+};
