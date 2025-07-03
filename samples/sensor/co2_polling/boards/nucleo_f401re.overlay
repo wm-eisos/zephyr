@@ -1,0 +1,15 @@
+/ {
+	aliases {
+		co2 = &gcds;
+	};
+};
+
+&i2c1 {
+	gcds:gcds-2526101040301@62 {
+        status = "okay";
+		compatible = "we,wsen-gcds-2526101040301";
+		reg = <0x62>;
+ 		temperature-offset = <8>;
+		operation-mode = "periodic";
+	};
+};

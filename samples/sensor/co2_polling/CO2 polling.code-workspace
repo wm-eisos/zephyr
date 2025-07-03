@@ -1,0 +1,100 @@
+{
+	"folders": [
+		{
+			"name": "CO2 Polling Sensor Sample",
+			"path": "./"
+		},
+		{
+			"name": "Zephyr RTOS",
+			"path": "../../.."
+		},
+		{
+			"name": "Zephyr RTOS WSEN GCDS Driver",
+			"path": "../../../drivers/sensor/wsen/"
+		},
+		{
+			"name": "Wuerth Elektroink HAL",
+			"path": "../../../../modules/hal/wurthelektronik"
+		}
+	],
+	"settings": {
+		"terminal.integrated.profiles.windows": {
+		"cmder": {
+			"path": "C:\\WINDOWS\\System32\\cmd.exe",
+			"args": ["/K", "${workspaceFolder:Zephyr RTOS}/zephyr-env.cmd"]
+			}
+		},
+		"terminal.integrated.defaultProfile.windows": "cmder",
+		"files.associations": {
+			"log.h": "c",
+			"device.h": "c",
+			"devicetree.h": "c",
+			"gpio.h": "c",
+			"atcommands.h": "c",
+			"string.h": "c",
+			"stdlib.h": "c",
+			"stdint.h": "c",
+			"inttypes.h": "c",
+			"daphnisi.h": "c",
+			"stdbool.h": "c",
+			"global_types.h": "c",
+			"global.h": "c",
+			"uart.h": "c",
+			"kernel.h": "c",
+			"lora.h": "c",
+			"atusersettings.h": "c",
+			"state.h": "c",
+			"array": "c",
+			"string": "c",
+			"string_view": "c",
+			"p2p.h": "c",
+			"bitset": "c",
+			"initializer_list": "c",
+			"regex": "c",
+			"util.h": "c",
+			"wsen_tids_2521020222501.h": "c",
+			"wsen_gcds_2526101040301.h": "c"
+		},
+		"C_Cpp.default.compileCommands": "${workspaceFolder:CO2 Polling Sensor Sample}/build/compile_commands.json",
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+			"label": "west flash",
+			"type": "shell",
+			"command": "west",
+			"args": [
+				"flash",
+			],
+			"group": "build",
+			"problemMatcher": []
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+			"name": "Debug Zephyr on Nucleo-F401RE",
+			"type": "cortex-debug",
+			"request": "launch",
+			"servertype": "openocd",
+			"cwd": "${workspaceFolder:CO2 Polling Sensor Sample}",
+			"executable": "${workspaceFolder:CO2 Polling Sensor Sample}/build/zephyr/zephyr.elf",
+			"device": "STM32F401RE",
+					"interface": "swd",
+	"rtos": "Zephyr",
+			"configFiles": [
+				"${workspaceRoot:Zephyr RTOS}/boards/st/nucleo_f401re/support/openocd.cfg",
+			],
+			"preLaunchTask": "west flash",
+			"postRestartCommands": [
+				"monitor reset halt"
+			],
+			"gdbPath": "${env:ZEPHYR_SDK_INSTALL_DIR}/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb.exe",
+			"toolchainPrefix": "arm-zephyr-eabi"
+			}
+		]
+	},
+}
