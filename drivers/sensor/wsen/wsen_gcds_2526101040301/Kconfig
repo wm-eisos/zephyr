@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Würth Elektronik eiSos GmbH & Co. KG
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig WSEN_GCDS_2526101040301
+	bool "WSEN-GCDS-2526101040301 CO2 sensor"
+	default y
+	depends on DT_HAS_WE_WSEN_GCDS_2526101040301_ENABLED
+	select I2C
+	select HAS_WESENSORS
+	help
+	  Enable driver for the WSEN-GCDS-2526101040301 I2C-based CO2 sensor.

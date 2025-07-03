@@ -1,0 +1,67 @@
+# Copyright (c) 2025 Würth Elektronik eiSos GmbH & Co. KG
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+    Würth Elektronik WSEN-GCDS-2526101040301 CO2 sensor
+
+compatible: "we,wsen-gcds-2526101040301"
+
+include: [sensor-device.yaml, i2c-device.yaml]
+
+properties:
+
+  operation-mode:
+    type: string
+    default: "single-shot"
+    enum:
+      - "single-shot"
+      - "low-power-periodic"
+      - "periodic"
+    description: |
+      Operation mode of the sensor.
+      single-shot: measurement is done when needed.
+      low-power-periodic: measurement is done periodically every 30 seconds.
+      periodic: measurement is done periodically every 5 seconds.
+
+  temperature-offset:
+    type: int
+    description: |
+      Temperature offset of the sensor in milli-degrees Celsius.
+      Valid ranges are (0 - 20000).
+
+  altitude:
+    type: int
+    description: |
+      Altitude of the sensor in meters.
+      Valid ranges are (0 - 3000).
+
+  ambient-pressure:
+    type: int
+    description: |
+      Ambient pressure of the sensor in Pa.
+      Valid ranges are (70000 - 120000).
+
+  automatic-self-calibration:
+    type: boolean
+    description: |
+      State of automatic self calibration.
+
+  automatic-self-calibration-target:
+    type: int
+    description: |
+      Value of the automatic self calibration
+      target for CO2 values in ppm.
+
+  automatic-self-calibration-initial-period:
+    type: int
+    description: |
+      Duration of initial period for automatic
+      self calibration in hours.
+      Valid values are multiples of 4.
+
+  automatic-self-calibration-standard-period:
+    type: int
+    description: |
+      Standard period for automatic
+      self calibration in hours.
+      Valid values are multiples of 4.

@@ -1382,3 +1382,8 @@ test_i2c_lsm9ds1_mag: lsm9ds1_mag@b9 {
 	compatible = "st,lsm9ds1_mag";
 	reg = <0xb9>;
 };
+
+test_i2c_wsen_gcds_2526101040301: wsen_gcds_2526101040301@ba {
+	compatible = "we,wsen-gcds-2526101040301";
+	reg = <0xba>;
+};
