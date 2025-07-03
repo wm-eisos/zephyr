@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # zephyr-keep-sorted-start
+source "drivers/sensor/wsen/wsen_gcds_2526101040301/Kconfig"
 source "drivers/sensor/wsen/wsen_hids_2525020210002/Kconfig"
 source "drivers/sensor/wsen/wsen_itds_2533020201601/Kconfig"
 source "drivers/sensor/wsen/wsen_pads_2511020213301/Kconfig"
