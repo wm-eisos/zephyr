@@ -1382,3 +1382,8 @@ test_i2c_lsm9ds1_mag: lsm9ds1_mag@b9 {
 	compatible = "st,lsm9ds1_mag";
 	reg = <0xb9>;
 };
+
+test_i2c_wsen_pdms_25131308XXX05: wsen_pdms_25131308XXX05@ba {
+	compatible = "we,wsen-pdms-25131308XXX05";
+	reg = <0xba>;
+};
