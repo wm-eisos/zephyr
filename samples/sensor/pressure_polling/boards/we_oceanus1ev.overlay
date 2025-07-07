@@ -1,0 +1,16 @@
+/ {
+	aliases {
+		pressure-sensor = &pdms;
+	};
+};
+
+&spi1 {
+	pdms:pdms-25131308xxx05@0 {
+        status = "okay";
+		compatible = "we,wsen-pdms-25131308XXX05";
+		reg = <0>;
+		sensor-type = <4>;
+        spi-max-frequency = <1000000>;
+		crc;
+	};
+};

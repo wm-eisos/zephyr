@@ -56,6 +56,8 @@ int main(void)
 				sensor_value_to_double(&pressure),
 				sensor_value_to_double(&altitude));
 		}
+
+		k_msleep(1000);
 	}
 	return 0;
 }

@@ -1,0 +1,16 @@
+/ {
+	aliases {
+		pressure-sensor = &pdms;
+	};
+};
+
+&i2c1 {
+	clock-frequency = <I2C_BITRATE_STANDARD>;
+	pdms:pdms-25131308xxx05@6d {
+        status = "okay";
+		compatible = "we,wsen-pdms-25131308XXX05";
+		reg = <0x6d>;
+		sensor-type = <4>;
+		crc;
+	};
+};
